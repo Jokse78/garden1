@@ -1,14 +1,14 @@
 from django.db import models
 
-from django.db import models
 
 class Veisle(models.Model):
     pavadinimas = models.CharField(max_length=100)
     aprasymas = models.TextField()
-    vietove = models.CharField(max_length=100)
-    zeme = models.CharField(max_length=100)
-    iranga = models.CharField(max_length=100)
-    siltnamis_laukas = models.CharField(max_length=100)
+    #vietove = models.CharField(max_length=100)
+    #zeme = models.CharField(max_length=100)
+    #iranga = models.CharField(max_length=100)
+    siltnamis_ar_laukas = models.CharField(max_length=100)
+
 
 class Darzas(models.Model):
     vartotojas = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -23,3 +23,4 @@ class Darzas(models.Model):
     purkimas = models.DateTimeField()
     derliaus_nuemimas = models.DateTimeField()
     pastabos = models.TextField()
+

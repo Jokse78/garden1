@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vartotojo Informacija</title>
 </head>
 <body>
+
+<h2>Įveskite vartotojo informaciją:</h2>
+
+<form action="/submit" method="post">
+    <label for="vardas">Vardas:</label><br>
+    <input type="text" id="vardas" name="vardas"><br>
+    <label for="pavarde">Pavardė:</label><br>
+    <input type="text" id="pavarde" name="pavarde"><br>
+    <label for="telefonas">Telefonas:</label><br>
+    <input type="tel" id="telefonas" name="telefonas"><br>
+    <label for="elpastas">El. paštas:</label><br>
+    <input type="email" id="elpastas" name="elpastas"><br>
+    <label for="vietove">Vietovė:</label><br>
+    <input type="text" id="vietove" name="vietove"><br><br>
+    <input type="submit" value="Siųsti">
+</form>
 
 </body>
 </html>

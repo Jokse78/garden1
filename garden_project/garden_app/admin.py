@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Veisle, Darzas
 
-# Register your models here.
+admin.site.register(Veisle)
+admin.site.register(Darzas)
