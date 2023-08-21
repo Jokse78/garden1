@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Veisle, Darzas
+from .models import Veisle, Darzo_darbai
 
 admin.site.register(Veisle)
-admin.site.register(Darzas)
+admin.site.register(Darzo_darbai)
