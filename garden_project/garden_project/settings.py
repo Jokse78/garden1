@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "secret_key")
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 print("DEBUG: ", DEBUG)
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
-ALLOWED_HOSTS = [False]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -45,7 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'garden_app',
+    'celery',
+    'django_celery_beat',
     ]
+CELERY_BROKER_URL = 'redis://localhost:127.0.0.1:8000/'  # Pakeiskite į savo brokerio URL
+CELERY_TIMEZONE = 'UTC'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -148,4 +152,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
